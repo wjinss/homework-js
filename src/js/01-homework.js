@@ -44,9 +44,10 @@ console.log(greetUser("정우진"));
 // 판매가(세후 금액)에서 원가(세전 금액)를 계산하려면 판매가를 "100% + 세금 비율"로 나눠야 합니다. 해당 품목의 세금 비율은 3.3%입니다.
 const calculateOriginalPrice = function (priceWithTax) {
   const TAX_RATE = 0.033;
-  return `${parseInt(priceWithTax / (1 + TAX_RATE))}원`;
+  return parseInt(priceWithTax / (1 + TAX_RATE));
 };
-console.log(calculateOriginalPrice(10000));
+console.log(calculateOriginalPrice(10000)) //number 반환
+console.log(calculateOriginalPrice(10000)+ "원") //string 반환
 
 // 2-3 주류 판매 가능 여부
 // 신분증의 나이를 확인해 주류 구매 가능 여부를 반환하는 함수를 작성합니다.
@@ -66,10 +67,11 @@ console.log(canSellAlcohol(registrationCard));
 
 const getDiscountedPrice = (originalPrice, discountPercent) =>{
   const DISCOUNTED_RATE = (100 - discountPercent) / 100
-  return `${originalPrice * DISCOUNTED_RATE}원`;
+  return originalPrice * DISCOUNTED_RATE;
 }
 
-console.log(getDiscountedPrice(18700, 20));
+console.log(getDiscountedPrice(18700, 20))//number 반환
+console.log(getDiscountedPrice(18700, 20)+ '원')//string 반환
 
 // 2-5 등급 판단
 // 점수를 전달받아 점수, 등급과 설명을 포함한 객체를 반환하는 함수를 작성합니다.
