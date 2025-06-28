@@ -1,0 +1,72 @@
+@import "./common/reset.css";
+
+.carousel {
+  border: 1px solid gold;
+}
+.carousel-wrapper {
+  .carousel-list {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+  }
+}
+.carousel-item {
+  width: 160px;
+
+  .carousel-img {
+    position: relative;
+    z-index: 100;
+    padding-top: 20px;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+
+    > picture {
+      overflow: hidden;
+    }
+
+    .carousel-content-bg {
+      border-radius: 8px 8px 0 0;
+    }
+
+    .carousel-content-character {
+      border-radius: 35px 35px 0 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 101;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  .carousel-content-text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+
+    .carousel-content-title {
+      text-overflow: ellipsis;
+      font-size: 16px;
+      margin-block-start: 8px;
+    }
+
+    .carousel-content-subtitle {
+      margin-block-end: 8px;
+    }
+
+    .carousel-content-category {
+      color: rgb(0 0 0 / 0.48);
+    }
+  }
+
+  &:hover {
+    .carousel-content-character {
+      transform: scale(1.02);
+    }
+    .carousel-content-text {
+      color: rgb(0 0 0 / 0.48);
+    }
+  }
+}
