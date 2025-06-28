@@ -1,72 +1,152 @@
 @import "./common/reset.css";
-
+body {
+  background: #eef0f3;
+  height: 100dvh;
+}
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
 .carousel {
-  border: 1px solid gold;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 3px 3px 8px rgb(0 0 0 / 0.1);
+}
+.carousel-title {
+  padding: 14px 10px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 100px;
+    padding: 6px 12px;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+
+  h1 {
+    display: inline;
+    font-size: 18px;
+    line-height: 1.12;
+    translate: 0 2px;
+  }
 }
 .carousel-wrapper {
+  padding: 0 24px;
+  width: 384px;
+
   .carousel-list {
     display: flex;
     flex-flow: row nowrap;
+    overflow: hidden;
     gap: 16px;
   }
-}
-.carousel-item {
-  width: 160px;
+  .carousel-item {
+    flex-basis: 160px;
+    flex-shrink: 0;
 
-  .carousel-img {
-    position: relative;
-    z-index: 100;
-    padding-top: 20px;
-    overflow: hidden;
-    border-radius: 0 0 8px 8px;
+    .carousel-link {
+      display: block;
+      border-radius: 4px;
 
-    > picture {
+      &:focus {
+        outline: 1px solid inherit;
+        outline-offset: 0;
+      }
+    }
+    .carousel-img {
+      position: relative;
+      z-index: 100;
+      padding-top: 20px;
       overflow: hidden;
+      border-radius: 0 0 8px 8px;
+
+      > picture {
+        overflow: hidden;
+      }
+
+      .carousel-content-bg {
+        border-radius: 8px 8px 0 0;
+      }
+
+      .carousel-content-character {
+        border-radius: 35px 35px 0 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 101;
+        transition: transform 0.3s ease-in-out;
+      }
     }
 
-    .carousel-content-bg {
-      border-radius: 8px 8px 0 0;
-    }
-
-    .carousel-content-character {
-      border-radius: 35px 35px 0 0;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 101;
-      transition: transform 0.3s ease-in-out;
-    }
-  }
-
-  .carousel-content-text {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 14px;
-    color: #000;
-    transition: color 0.3s ease-in-out;
-
-    .carousel-content-title {
-      text-overflow: ellipsis;
-      font-size: 16px;
-      margin-block-start: 8px;
-    }
-
-    .carousel-content-subtitle {
-      margin-block-end: 8px;
-    }
-
-    .carousel-content-category {
-      color: rgb(0 0 0 / 0.48);
-    }
-  }
-
-  &:hover {
-    .carousel-content-character {
-      transform: scale(1.02);
-    }
     .carousel-content-text {
-      color: rgb(0 0 0 / 0.48);
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 14px;
+      color: #000;
+      transition: color 0.3s ease-in-out;
+
+      .carousel-content-title {
+        text-overflow: ellipsis;
+        font-size: 16px;
+        margin-block-start: 8px;
+      }
+
+      .carousel-content-subtitle {
+        margin-block-end: 8px;
+      }
+
+      .carousel-content-category {
+        color: rgb(0 0 0 / 0.48);
+      }
     }
+
+    &:hover {
+      .carousel-content-character {
+        transform: scale(1.05);
+      }
+      .carousel-content-text {
+        color: rgb(0 0 0 / 0.48);
+      }
+    }
+  }
+}
+.carousel-button-wrapper {
+  padding-block: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  .carosuelButton {
+    inline-size: 40px;
+    block-size: 40px;
+    border-radius: 100px;
+    position: relative;
+    border: 1px solid rgb(0 0 0 / 0.08);
+    transition: background 0.3s ease-in-out;
+
+    svg {
+      position: absolute;
+      inset: 50% 0 0 50%;
+      translate: -50% -50%;
+    }
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+  .nextButton {
+    order: 1;
+  }
+  .pagination {
+    font-size: 18px;
   }
 }
