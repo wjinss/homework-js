@@ -14,3 +14,7 @@
 
 - [1주차 과제](./src/js/01-homework.js)
 - [3주차 과제](./src/js/03-homework.js)
+
+### 배포 링크
+
+- [3주차 과제](https://wjinss.github.io/homework-js/src/page/homework-3.html)
