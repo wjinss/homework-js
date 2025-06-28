@@ -38,19 +38,19 @@ main {
   }
 }
 .carousel-wrapper {
-  padding: 0 24px;
-  width: 384px;
-  overflow: hidden;
+  margin: 0 24px;
+  width: 336px;
+  overflow-x: hidden;
 
   .carousel-list {
     display: flex;
     flex-flow: row nowrap;
-
     gap: 16px;
   }
   .carousel-item {
     flex-basis: 160px;
     flex-shrink: 0;
+    flex-grow: 1;
 
     .carousel-link {
       display: block;
