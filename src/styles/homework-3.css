@@ -40,11 +40,12 @@ main {
 .carousel-wrapper {
   padding: 0 24px;
   width: 384px;
+  overflow: hidden;
 
   .carousel-list {
     display: flex;
     flex-flow: row nowrap;
-    overflow: hidden;
+
     gap: 16px;
   }
   .carousel-item {
