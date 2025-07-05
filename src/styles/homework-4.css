@@ -1,0 +1,116 @@
+@import "./common/reset.css";
+/* @import url("//fonts.googleapis.com/earlyaccess/notosanskr.css"); */
+
+:root {
+  --main-color: #b31116;
+  --text-color: #1d1316;
+  interpolate-size: allow-keywords;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.container {
+  border: 1px solid #000;
+  display: inline-flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 36px;
+  padding: 64px 88px;
+  color: var(--main-color);
+  line-height: 1.4;
+
+  .text-wrapper {
+    padding-top: 64px;
+  }
+  .likelion-link {
+    font-weight: 700;
+    transition: color 0.2s ease-in;
+
+    &:hover {
+      color: #cc494d;
+    }
+  }
+  .title {
+    font-weight: 200;
+    font-size: 86px;
+    padding-block: 88px 64px;
+    line-height: 1.2;
+    .title-bold {
+      display: block;
+      font-weight: 700;
+      word-break: keep-all;
+    }
+  }
+  .description {
+    word-break: keep-all;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    inline-size: clamp(40%, 100%, 300px);
+    padding-block-end: 84px;
+  }
+
+  .link-wrapper {
+    display: flex;
+
+    .link {
+      padding: 12px 36px;
+      font-size: 24px;
+    }
+  }
+  .frontend-school-link {
+    color: #fff;
+    background: var(--text-color);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition-timing-function: 0.5s;
+
+    span {
+      display: block;
+      position: absolute;
+      z-index: 0;
+      inline-size: 0px;
+      block-size: 0px;
+      border-radius: 100%;
+      top: 30%;
+      left: 10%;
+      translate: -50% -50%;
+      background: var(--main-color);
+      transition: inline-size 0.5s ease-in-out, padding-top 0.5s ease-in-out;
+    }
+    p {
+      position: relative;
+      z-index: 1;
+    }
+    &:hover {
+      span {
+        inline-size: 200%;
+        padding-top: 200%;
+      }
+    }
+  }
+  .curriculum-link {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 10%;
+      bottom: 0;
+      inline-size: 0;
+      block-size: 2px;
+      background: #b31116;
+      transition: inline-size 0.3s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        inline-size: 80%;
+      }
+    }
+  }
+}
