@@ -6,38 +6,38 @@
       defaults: { opacity: 0, duration: 0.8, ease: "back.inOut(3)" },
     });
     contentsTl
-      .from(".text-wrapper .likelion-link", { y: -400 })
-      .from(".text-wrapper .title", { x: -400 })
-      .from(".text-wrapper .description", { x: -300 }, 1.3);
+      .from("#likelion-link", { y: -400 })
+      .from("#title", { x: -400 })
+      .from("#description", { x: -300 }, 1.3);
   });
 
   const graphicTl = gsap.timeline({
     defaults: { opacity: 0, duration: 1.2, ease: "back.inOut(1.5)" },
   });
   graphicTl
-    .from(".first-verical-line", { y: 600, duration: 0.8 })
-    .from(".second-verical-line", { y: 800 }, 0)
-    .from(".third-verical-line", { y: 300, duration: 1.2 }, 0)
-    .from(".first-horizontal-line", { x: 800 }, 0.5)
-    .from(".second-horizontal-line", { x: 600 }, 0)
-    .from(".third-horizontal-line", { x: 600, duration: 1.2 }, "0.8")
-    .from(".yellow-circle", { y: -600 }, "0.2")
+    .from("#first-verical-line", { y: 600, duration: 0.8 })
+    .from("#second-verical-line", { y: 800 }, 0)
+    .from("#third-verical-line", { y: 300, duration: 1.2 }, 0)
+    .from("#first-horizontal-line", { x: 800 }, 0.5)
+    .from("#second-horizontal-line", { x: 600 }, 0)
+    .from("#third-horizontal-line", { x: 600, duration: 1.2 }, "0.8")
+    .from("#yellow-circle", { y: -600 }, "0.2")
     .from(
-      ".orange-quarter-circle",
+      "#orange-quarter-circle",
       { transformOrigin: "bottom right", rotation: 180 },
       "0.2"
     )
     .from(
-      ".brown-quarter-circle",
+      "#brown-quarter-circle",
       {
         transformOrigin: "top right",
         rotation: -270,
       },
       0.6
     )
-    .from(".red-vertical-ring", { scaleY: 0 }, "-=1")
+    .from("#red-vertical-ring", { scaleY: 0 }, "-=1")
     .from(
-      ".black-quarter-circle1",
+      "#black-quarter-circle1",
       {
         transformOrigin: "bottom left",
         scale: 0,
@@ -46,7 +46,7 @@
       0.5
     )
     .from(
-      ".black-quarter-circle2",
+      "#black-quarter-circle2",
       {
         transformOrigin: "top right",
         scale: 1.2,
@@ -56,7 +56,7 @@
       "-=1.5"
     )
     .from(
-      ".ivory-quarter-circle",
+      "#ivory-quarter-circle",
       {
         transformOrigin: "top right",
         rotate: -180,
@@ -64,9 +64,9 @@
       },
       "-=1"
     )
-    .from(".red-circle", { x: -1200 }, "-=1.5")
+    .from("#red-circle", { x: -1200 }, "-=1.5")
     .from(
-      ".red-half-circle",
+      "#red-half-circle",
       {
         transformOrigin: "top center",
         rotate: 720,
@@ -76,22 +76,22 @@
       0
     )
     .from(
-      ".orange-half-circle",
+      "#orange-half-circle",
       { transformOrigin: "center right", rotate: 180 },
       0
     )
     .from(
-      ".yellow-half-circle",
+      "#yellow-half-circle",
       { transformOrigin: "center right", rotate: 540, duration: 1.2 },
       0
     )
     .from(
-      ".red-ring",
+      "#red-ring",
       { y: -300, transformOrigin: "center", scale: 0.1, duration: 1.2 },
       "-=2"
     )
     .from(
-      ".red-stroke-ring",
+      "#red-stroke-ring",
       {
         x: -300,
         transformOrigin: "-50% 10%",
@@ -101,10 +101,10 @@
       },
       "-=2"
     )
-    .from(".ivory-opener", { scaleY: 2, yPercent: 50 }, "<")
-    .from(".red-opener", { xPercent: -80 }, 0.5)
+    .from("#ivory-opener", { scaleY: 2, yPercent: 50 }, "<")
+    .from("#red-opener", { xPercent: -80 }, 0.5)
     .from(
-      ".orange-angled-ring",
+      "#orange-angled-ring",
       {
         y: -100,
         transformOrigin: "40% 7%",
