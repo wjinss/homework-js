@@ -20,4 +20,4 @@
 ### 배포 링크
 
 - [3주차 과제](https://wjinss.github.io/homework-js/src/page/homework-3.html)
-- [3주차 과제](https://wjinss.github.io/homework-js/src/page/homework-4.html)
+- [4주차 과제](https://wjinss.github.io/homework-js/src/page/homework-4.html)
