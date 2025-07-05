@@ -1,0 +1,21 @@
+@import "./reset.css";
+body {
+  display: flex;
+}
+
+main {
+  margin-inline: auto;
+  align-content: center;
+
+  h1 {
+    padding-block-end: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    > li {
+      padding-block: 15px;
+    }
+  }
+}
